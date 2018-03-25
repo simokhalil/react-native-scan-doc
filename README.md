@@ -27,19 +27,19 @@ I myself unfortunately is tied up with other work of my own. Will look into this
 #####1. Download
 - Download OpenCV package and extract it : https://sourceforge.net/projects/opencvlibrary/files/opencv-android/3.2.0/opencv-3.2.0-android-sdk.zip/download
 
-#####2. Setup OpenCV Android SDK
+##### 2. Setup OpenCV Android SDK
 - Import OpenCV module in Android Studio (File / New / Import Module): `<path_to_downloaded_package>/sdk/java`
 - In the project explorer change the project view from Android to Project. Open Project -> openCVLibrary320 -> build.gradle
 - Change the compileSdkVersion, targetSdkVersion and buildToolsVersion value to the latest version you use. Then sync the project
 - Configure Module as dependency: `File / Project Structure / app / Tab: Dependencies / + / Module Dependency / openCVLibrary320`
 
-#####3. Add Native libraries
+##### 3. Add Native libraries
 - Now we need to add native JNI libraries in our project. These libraries should be added in jniLibs directory. Create a new jniLibs directory in `app -> src -> main`.
 - Open the extracted OpenCV SDK directory. Switch to `OpenCV-android-sdk/sdk/native/libs` directory.
 - You will find directories for many CPU architectures. Copy the required architecture directory to the jniLibs directory.
 - In each copied directory, delete all files except `libopencv_java3.so`
 
-#####4. Migrate from ndkCompile to ndk-build
+##### 4. Migrate from ndkCompile to ndk-build
 If you're using the deprecated ndkCompile, you should migrate to using either CMake or ndk-build. Because ndkCompile generates an intermediate Android.mk file for you, migrating to ndk-build may be a simpler choice.
 
 To migrate from ndkCompile to ndk-build, proceed as follows:
@@ -91,7 +91,7 @@ To migrate from ndkCompile to ndk-build, proceed as follows:
     android.useDeprecatedNdk = true
     ```
 
-#####5. Init OpenCV in your main Activity
+##### 5. Init OpenCV in your main Activity
 Add the following to the top of your MainActivity Class
 
 ```
@@ -111,7 +111,7 @@ public class MainActivity extends ReactActivity {
 }
 ```
 
-##Features
+## Features
 ### Android
 - [x] Scan document.
 - [x] Perspective Transform.
@@ -120,7 +120,7 @@ public class MainActivity extends ReactActivity {
 - [ ] Scan document.
 - [ ] Perspective Transform.
 
-##Requirements
+## Requirements
 ### Android
 API 16+
 ### iOS
