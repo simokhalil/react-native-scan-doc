@@ -24,7 +24,7 @@ I myself unfortunately is tied up with other work of my own. Will look into this
 `$ react-native link react-native-scan-doc`
 
 ### Setup OpenCV
-#####1. Download
+##### 1. Download
 - Download OpenCV package and extract it : https://sourceforge.net/projects/opencvlibrary/files/opencv-android/3.2.0/opencv-3.2.0-android-sdk.zip/download
 
 ##### 2. Setup OpenCV Android SDK
